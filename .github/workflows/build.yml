@@ -19,8 +19,7 @@ jobs:
           timezoneLinux: "Asia/Shanghai"
       - name: Parse
         run: |
-          rm -r ./data || true
-          pnpm install openipdb.ipdb
+          rm -rf ./data || true
           pnpm install
           cp ./node_modules/openipdb.ipdb/openipdb.ipdb /tmp/openipdb.ipdb
           ls -al /tmp/openipdb.ipdb
