@@ -8,6 +8,19 @@ const ISP_MAP = {
   'chinatelecom.com.cn': 'chinatelecom', // 中国电信
   'chinaunicom.com': 'chinaunicom', // 中国联通
   'chinamobile.com': 'chinamobile', // 中国移动
+  'drpeng.com.cn': 'drpeng', // 彭博士
+  'cernet.edu.cn': 'cernet', // 中国教育网
+  'cstnet.cn': 'cstnet', // 中国科技网
+  // 常见云服务商
+  'aliyun.com': 'aliyun', // 阿里云
+  'tencent.com': 'tencent', // 腾讯云
+  'cloudflare.com': 'cloudflare',
+  'huawei.com': 'huawei', // 华为云
+  'microsoft.com': 'microsoft',
+  'bytedance.com': 'bytedance', // 字节跳动
+  'volcengine.com': 'volcengine', // 火山引擎
+  'cloud.google.com': 'googlecloud', // Google Cloud
+  'digitalocean.com': 'digitalocean', // DigitalOcean
 }
 
 const plugin = (through2, file, cb) => {
