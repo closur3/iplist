@@ -5,6 +5,7 @@ const ipdb_cac = require('./cac')
 const ProgressBar = require('progress')
 
 const plugin = (through2, file, cb) => {
+
   console.log('Parse ipdb')
 
   const ipdb = new IPDB(file.contents, {
@@ -13,27 +14,27 @@ const plugin = (through2, file, cb) => {
 
   let bar = new ProgressBar(':bar :current/:total', { total: ipdb.meta.node_count })
 
-  // 只要这三家
-  const ALLOWED_ISP = [
-    'chinatelecom.com.cn', // 中国电信
-    'chinamobile.com',     // 中国移动
-    'chinaunicom.com'      // 中国联通
-  ]
-  // 只要浙江省
-  const TARGET_REGION = '330000'
-
   let result = []
   let ip = '0.0.0.0'
   while (true) {
     const info = ipdb.find(ip).data
-    const region = info.region_code
-    const isp = info.isp_domain || ''
-    // 只保留浙江省三大运营商
-    if (region === TARGET_REGION && ALLOWED_ISP.includes(isp)) {
-      if (!result[region]) {
-        result[region] = []
+    const china_admin_code = info.china_admin_code
+    if (china_admin_code?.length === 6) {
+      let cac = china_admin_code
+      {
+        cac = `${cac.substr(0, 4)}00`
+        if (!result[cac]) {
+          result[cac] = []
+        }
+        result[cac].push(`${info.range.from}/${info.bitmask}`)
       }
-      result[region].push(`${info.range.from}/${info.bitmask}`)
+      {
+        cac = `${cac.substr(0, 2)}0000`
+        if (!result[cac]) {
+          result[cac] = []
+        }
+        result[cac].push(`${info.range.from}/${info.bitmask}`)
+      }
     }
     bar.tick()
     ip = info.range.next
@@ -42,13 +43,12 @@ const plugin = (through2, file, cb) => {
 
   console.log()
 
-  // 只输出浙江省数据
-  if (result[TARGET_REGION]) {
+  for (let [china_admin_code, cidrs] of Object.entries(result)) {
     let temp = new vinyl({
       cwd: '/',
       base: '/',
-      path: `/${TARGET_REGION}/${TARGET_REGION}.txt`,
-      contents: new Buffer.from(result[TARGET_REGION].join('\n'))
+      path: `/${china_admin_code}.txt`,
+      contents: new Buffer.from(cidrs.join('\n'))
     })
     through2.push(temp)
   }
