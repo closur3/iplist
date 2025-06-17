@@ -1,13 +1,14 @@
 const vinyl = require('vinyl')
 const IPDB = require('ipdb')
 const ipdb_range = require('@ipdb/range')
+const ipdb_cac = require('./cac')
 const ProgressBar = require('progress')
 
 const plugin = (through2, file, cb) => {
   console.log('Parse ipdb')
 
   const ipdb = new IPDB(file.contents, {
-    patches: [ipdb_range]
+    patches: [ipdb_range, ipdb_cac]
   })
 
   let bar = new ProgressBar(':bar :current/:total', { total: ipdb.meta.node_count })
