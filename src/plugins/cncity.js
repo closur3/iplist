@@ -4,6 +4,13 @@ const ipdb_range = require('@ipdb/range')
 const ipdb_cac = require('./cac')
 const ProgressBar = require('progress')
 
+// 只保留三大运营商
+const ISP_MAP = {
+  'chinatelecom.com.cn': 'chinatelecom', // 中国电信
+  'chinaunicom.com': 'chinaunicom',     // 中国联通
+  'chinamobile.com': 'chinamobile',     // 中国移动
+}
+
 const plugin = (through2, file, cb) => {
 
   console.log('Parse ipdb')
@@ -19,7 +26,10 @@ const plugin = (through2, file, cb) => {
   while (true) {
     const info = ipdb.find(ip).data
     const china_admin_code = info.china_admin_code
-    if (china_admin_code?.length === 6) {
+    const isp = info.isp_domain || ''
+
+    // 只保留三大运营商的IP
+    if (china_admin_code?.length === 6 && ISP_MAP[isp]) {
       let cac = china_admin_code
       {
         cac = `${cac.substr(0, 4)}00`
