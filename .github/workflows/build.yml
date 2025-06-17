@@ -13,24 +13,17 @@ jobs:
           version: 9
       - name: Checkout Data
         uses: actions/checkout@v4
-      - name: Set up S3cmd cli tool
-        uses: s3-actions/s3cmd@v1.9.0
-        with:
-          provider: cloudflare
-          region: 'auto'
-          access_key: ${{ secrets.S3_ACCESS_KEY }}
-          secret_key: ${{ secrets.S3_SECRET_KEY }}
-          account_id: ${{ secrets.S3_ACCOUNT_ID }}
       - name: Set Timezone
         uses: szenius/set-timezone@v2.0
         with:
           timezoneLinux: "Asia/Shanghai"
       - name: Parse
         run: |
-          s3cmd get s3://openipdb/openipdb.ipdb /tmp/openipdb.ipdb
-          ls -al /tmp/openipdb.ipdb
-          rm -r ./data
+          rm -r ./data || true
+          pnpm install openipdb.ipdb
           pnpm install
+          cp ./node_modules/openipdb.ipdb/openipdb.ipdb /tmp/openipdb.ipdb
+          ls -al /tmp/openipdb.ipdb
           pnpm run build
       - name: Push
         env:
@@ -39,7 +32,6 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to the output on this push; exiting."
             exit 0
-          fi
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "i@i-meto.com"
