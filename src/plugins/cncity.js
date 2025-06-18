@@ -4,6 +4,19 @@ const ipdb_range = require('@ipdb/range')
 const ipdb_cac = require('./cac')
 const ProgressBar = require('progress')
 
+// 云服务商 ISP 列表
+const CLOUD_ISP_LIST = [
+  'aliyun.com',      // 阿里云
+  'tencent.com',     // 腾讯云
+  'cloudflare.com',  // Cloudflare
+  'huawei.com',      // 华为云
+  'microsoft.com',   // Microsoft Azure
+  'bytedance.com',   // 字节跳动
+  'volcengine.com',  // 火山引擎
+  'cloud.google.com',// Google Cloud
+  'digitalocean.com' // DigitalOcean
+]
+
 const plugin = (through2, file, cb) => {
 
   console.log('Parse ipdb')
@@ -18,6 +31,14 @@ const plugin = (through2, file, cb) => {
   let ip = '0.0.0.0'
   while (true) {
     const info = ipdb.find(ip).data
+
+    if (info.isp_domain && CLOUD_ISP_LIST.includes(info.isp_domain)) {
+      bar.tick()
+      ip = info.range.next
+      if (ip === '0.0.0.0') break
+      continue
+    }
+
     const china_admin_code = info.china_admin_code
     if (china_admin_code?.length === 6) {
       let cac = china_admin_code
