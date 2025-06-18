@@ -26,21 +26,21 @@
 
 |Country|CIDR|
 |---|---|
-|中国 (CN)|https://github.com/closur3/iplist/tree/master/data/country/CN.txt|
-|中国香港|https://github.com/closur3/iplist/tree/master/data/country/HK.txt|
-|美国|https://github.com/closur3/iplist/tree/master/data/country/US.txt|
-|日本|https://github.com/closur3/iplist/tree/master/data/country/JP.txt|
-||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/country.md)|
+|中国 (CN)|https://github.com/closur3/iplist/blob/master/data/country/CN.txt|
+|中国香港|https://github.com/closur3/iplist/blob/master/data/country/HK.txt|
+|美国|https://github.com/closur3/iplist/blob/master/data/country/US.txt|
+|日本|https://github.com/closur3/iplist/blob/master/data/country/JP.txt|
+||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/country.md)|
 
 ### 中国内地 IP 段 🌟
 
 由于网络审查的原因，你可能需要一份「中国内地区域的 IP 地址列表」，数据精确度可以自行多方比对，仅供参考，数据每小时更新一次。
 
-详情 https://github.com/metowolf/iplist/blob/master/docs/china.md
+详情 https://github.com/closur3/iplist/blob/master/docs/china.md
 
 |Country|CIDR|
 |---|---|
-|中国内地 (CN)|https://github.com/closur3/iplist/tree/master/data/special/china.txt|
+|中国内地 (CN)|https://github.com/closur3/iplist/blob/master/data/special/china.txt|
 
 ### 省级 IP 段
 
@@ -48,10 +48,10 @@
 
 |City|CIDR|
 |---|---|
-|北京市|https://github.com/closur3/iplist/tree/master/data/cncity/110000.txt|
-|浙江省|https://github.com/closur3/iplist/tree/master/data/cncity/330000.txt|
-|广东省|https://github.com/closur3/iplist/tree/master/data/cncity/440000.txt|
-||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/cncity.md)|
+|北京市|https://github.com/closur3/iplist/blob/master/data/cncity/110000.txt|
+|浙江省|https://github.com/closur3/iplist/blob/master/data/cncity/330000.txt|
+|广东省|https://github.com/closur3/iplist/blob/master/data/cncity/440000.txt|
+||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/cncity.md)|
 
 ### 市级 IP 段
 
@@ -59,31 +59,31 @@
 
 |City|CIDR|
 |---|---|
-|广东省广州市|https://github.com/closur3/iplist/tree/master/data/cncity/440100.txt|
-|广东省深圳市|https://github.com/closur3/iplist/tree/master/data/cncity/440300.txt|
-|广东省佛山市|https://github.com/closur3/iplist/tree/master/data/cncity/440600.txt|
-||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/cncity.md)|
+|广东省广州市|https://github.com/closur3/iplist/blob/master/data/cncity/440100.txt|
+|广东省深圳市|https://github.com/closur3/iplist/blob/master/data/cncity/440300.txt|
+|广东省佛山市|https://github.com/closur3/iplist/blob/master/data/cncity/440600.txt|
+||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/cncity.md)|
 
 ### 运营商 IP 段
 
 |ISP|CIDR|
 |---|---|
-|中国电信|https://github.com/closur3/iplist/tree/master/data/isp/chinatelecom.txt|
-|中国移动|https://github.com/closur3/iplist/tree/master/data/isp/chinamobile.txt|
-|中国联通|https://github.com/closur3/iplist/tree/master/data/isp/chinaunicom.txt|
-|彭博士|https://github.com/closur3/iplist/tree/master/data/isp/drpeng.txt|
-|中国教育网|https://github.com/closur3/iplist/tree/master/data/isp/cernet.txt|
-|中国科技网|https://github.com/closur3/iplist/tree/master/data/isp/cstnet.txt|
+|中国电信|https://github.com/closur3/iplist/blob/master/data/isp/chinatelecom.txt|
+|中国移动|https://github.com/closur3/iplist/blob/master/data/isp/chinamobile.txt|
+|中国联通|https://github.com/closur3/iplist/blob/master/data/isp/chinaunicom.txt|
+|彭博士|https://github.com/closur3/iplist/blob/master/data/isp/drpeng.txt|
+|中国教育网|https://github.com/closur3/iplist/blob/master/data/isp/cernet.txt|
+|中国科技网|https://github.com/closur3/iplist/blob/master/data/isp/cstnet.txt|
 
 ### 公有云厂商 IP 段
 
 |ISP|CIDR|
 |---|---|
-|阿里云|https://github.com/closur3/iplist/tree/master/data/isp/aliyun.txt|
-|腾讯云|https://github.com/closur3/iplist/tree/master/data/isp/tencent.txt|
-|字节跳动|https://github.com/closur3/iplist/tree/master/data/isp/bytedance.txt|
-|华为云|https://github.com/closur3/iplist/tree/master/data/isp/huawei.txt|
-|Google Cloud|https://github.com/closur3/iplist/tree/master/data/isp/googlecloud.txt|
+|阿里云|https://github.com/closur3/iplist/blob/master/data/isp/aliyun.txt|
+|腾讯云|https://github.com/closur3/iplist/blob/master/data/isp/tencent.txt|
+|字节跳动|https://github.com/closur3/iplist/blob/master/data/isp/bytedance.txt|
+|华为云|https://github.com/closur3/iplist/blob/master/data/isp/huawei.txt|
+|Google Cloud|https://github.com/closur3/iplist/blob/master/data/isp/googlecloud.txt|
 
 ## 数据来源
 
