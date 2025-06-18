@@ -26,10 +26,10 @@
 
 |Country|CIDR|
 |---|---|
-|中国 (CN)|https://metowolf.github.io/iplist/data/country/CN.txt|
-|中国香港|https://metowolf.github.io/iplist/data/country/HK.txt|
-|美国|https://metowolf.github.io/iplist/data/country/US.txt|
-|日本|https://metowolf.github.io/iplist/data/country/JP.txt|
+|中国 (CN)|https://github.com/closur3/iplist/tree/master/data/country/CN.txt|
+|中国香港|https://github.com/closur3/iplist/tree/master/data/country/HK.txt|
+|美国|https://github.com/closur3/iplist/tree/master/data/country/US.txt|
+|日本|https://github.com/closur3/iplist/tree/master/data/country/JP.txt|
 ||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/country.md)|
 
 ### 中国内地 IP 段 🌟
@@ -40,7 +40,7 @@
 
 |Country|CIDR|
 |---|---|
-|中国内地 (CN)|https://metowolf.github.io/iplist/data/special/china.txt|
+|中国内地 (CN)|https://github.com/closur3/iplist/tree/master/data/special/china.txt|
 
 ### 省级 IP 段
 
@@ -48,9 +48,9 @@
 
 |City|CIDR|
 |---|---|
-|北京市|https://metowolf.github.io/iplist/data/cncity/110000.txt|
-|浙江省|https://metowolf.github.io/iplist/data/cncity/330000.txt|
-|广东省|https://metowolf.github.io/iplist/data/cncity/440000.txt|
+|北京市|https://github.com/closur3/iplist/tree/master/data/cncity/110000.txt|
+|浙江省|https://github.com/closur3/iplist/tree/master/data/cncity/330000.txt|
+|广东省|https://github.com/closur3/iplist/tree/master/data/cncity/440000.txt|
 ||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/cncity.md)|
 
 ### 市级 IP 段
@@ -59,31 +59,31 @@
 
 |City|CIDR|
 |---|---|
-|广东省广州市|https://metowolf.github.io/iplist/data/cncity/440100.txt|
-|广东省深圳市|https://metowolf.github.io/iplist/data/cncity/440300.txt|
-|广东省佛山市|https://metowolf.github.io/iplist/data/cncity/440600.txt|
+|广东省广州市|https://github.com/closur3/iplist/tree/master/data/cncity/440100.txt|
+|广东省深圳市|https://github.com/closur3/iplist/tree/master/data/cncity/440300.txt|
+|广东省佛山市|https://github.com/closur3/iplist/tree/master/data/cncity/440600.txt|
 ||[ > 查看更多](https://github.com/metowolf/iplist/tree/master/docs/cncity.md)|
 
 ### 运营商 IP 段
 
 |ISP|CIDR|
 |---|---|
-|中国电信|https://metowolf.github.io/iplist/data/isp/chinatelecom.txt|
-|中国移动|https://metowolf.github.io/iplist/data/isp/chinamobile.txt|
-|中国联通|https://metowolf.github.io/iplist/data/isp/chinaunicom.txt|
-|彭博士|https://metowolf.github.io/iplist/data/isp/drpeng.txt|
-|中国教育网|https://metowolf.github.io/iplist/data/isp/cernet.txt|
-|中国科技网|https://metowolf.github.io/iplist/data/isp/cstnet.txt|
+|中国电信|https://github.com/closur3/iplist/tree/master/data/isp/chinatelecom.txt|
+|中国移动|https://github.com/closur3/iplist/tree/master/data/isp/chinamobile.txt|
+|中国联通|https://github.com/closur3/iplist/tree/master/data/isp/chinaunicom.txt|
+|彭博士|https://github.com/closur3/iplist/tree/master/data/isp/drpeng.txt|
+|中国教育网|https://github.com/closur3/iplist/tree/master/data/isp/cernet.txt|
+|中国科技网|https://github.com/closur3/iplist/tree/master/data/isp/cstnet.txt|
 
 ### 公有云厂商 IP 段
 
 |ISP|CIDR|
 |---|---|
-|阿里云|https://metowolf.github.io/iplist/data/isp/aliyun.txt|
-|腾讯云|https://metowolf.github.io/iplist/data/isp/tencent.txt|
-|字节跳动|https://metowolf.github.io/iplist/data/isp/bytedance.txt|
-|华为云|https://metowolf.github.io/iplist/data/isp/huawei.txt|
-|Google Cloud|https://metowolf.github.io/iplist/data/isp/googlecloud.txt|
+|阿里云|https://github.com/closur3/iplist/tree/master/data/isp/aliyun.txt|
+|腾讯云|https://github.com/closur3/iplist/tree/master/data/isp/tencent.txt|
+|字节跳动|https://github.com/closur3/iplist/tree/master/data/isp/bytedance.txt|
+|华为云|https://github.com/closur3/iplist/tree/master/data/isp/huawei.txt|
+|Google Cloud|https://github.com/closur3/iplist/tree/master/data/isp/googlecloud.txt|
 
 ## 数据来源
 
