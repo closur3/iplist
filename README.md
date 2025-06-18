@@ -44,7 +44,7 @@
 
 ### 省级 IP 段
 
-采用 [行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/201901-06/201906211048.html) 进行分类，如广东省为 440000
+不包含云服务商IP，采用 [行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/201901-06/201906211048.html) 进行分类，如广东省为 440000
 
 |City|CIDR|
 |---|---|
