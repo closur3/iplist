@@ -26,7 +26,8 @@ const plugin = (through2, file, cb) => {
 
   let bar = new ProgressBar(':bar :current/:total', { total: ipdb.meta.node_count })
 
-  let result = []
+  // 用于存储每个省的 IP 段
+  let result = {}
   let ip = '0.0.0.0'
   while (true) {
     const info = ipdb.find(ip).data
@@ -40,13 +41,13 @@ const plugin = (through2, file, cb) => {
     }
 
     const china_admin_code = info.china_admin_code
-    // 只处理省级（如 110000、310000）
-    if (china_admin_code?.length === 6 && china_admin_code.endsWith('0000')) {
-      let cac = china_admin_code
-      if (!result[cac]) {
-        result[cac] = []
+    if (china_admin_code?.length === 6) {
+      // 取前两位省级代码
+      const province_code = `${china_admin_code.substr(0, 2)}0000`
+      if (!result[province_code]) {
+        result[province_code] = []
       }
-      result[cac].push(`${info.range.from}/${info.bitmask}`)
+      result[province_code].push(`${info.range.from}/${info.bitmask}`)
     }
     bar.tick()
     ip = info.range.next
@@ -55,11 +56,11 @@ const plugin = (through2, file, cb) => {
 
   console.log()
 
-  for (let [china_admin_code, cidrs] of Object.entries(result)) {
+  for (let [province_code, cidrs] of Object.entries(result)) {
     let temp = new vinyl({
       cwd: '/',
       base: '/',
-      path: `/${china_admin_code}.txt`,
+      path: `/${province_code}.txt`,
       contents: Buffer.from(cidrs.join('\n'))
     })
     through2.push(temp)
