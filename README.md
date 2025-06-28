@@ -20,48 +20,15 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmetowolf%2Fiplist.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmetowolf%2Fiplist?ref=badge_shield)
 
 
-### 国家 IP 段
-
-采用 [ISO_3166-1](https://zh.wikipedia.org/wiki/ISO_3166-1%E4%BA%8C%E4%BD%8D%E5%AD%97%E6%AF%8D%E4%BB%A3%E7%A0%81) 进行分类
-
-|Country|CIDR|
-|---|---|
-|中国 (CN)|https://github.com/closur3/iplist/blob/master/data/country/CN.txt|
-|中国香港|https://github.com/closur3/iplist/blob/master/data/country/HK.txt|
-|美国|https://github.com/closur3/iplist/blob/master/data/country/US.txt|
-|日本|https://github.com/closur3/iplist/blob/master/data/country/JP.txt|
-||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/country.md)|
-
-### 中国内地 IP 段 🌟
-
-由于网络审查的原因，你可能需要一份「中国内地区域的 IP 地址列表」，数据精确度可以自行多方比对，仅供参考，数据每小时更新一次。
-
-详情 https://github.com/closur3/iplist/blob/master/docs/china.md
-
-|Country|CIDR|
-|---|---|
-|中国内地 (CN)|https://github.com/closur3/iplist/blob/master/data/special/china.txt|
-
 ### 省级 IP 段
 
-特别剔除云服务商IP，采用 [行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/201901-06/201906211048.html) 进行分类，如广东省为 440000
+特别剔除云服务商IP，采用 [行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/201901-06/201906211048.html) 进行分类。
 
 |City|CIDR|
 |---|---|
 |北京市|https://github.com/closur3/iplist/blob/master/data/cncity/110000.txt|
 |浙江省|https://github.com/closur3/iplist/blob/master/data/cncity/330000.txt|
 |广东省|https://github.com/closur3/iplist/blob/master/data/cncity/440000.txt|
-||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/cncity.md)|
-
-### 市级 IP 段
-
-采用 [行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/201901-06/20190203221738.html) 进行分类，如广东省为 440000，广州市为 440100
-
-|City|CIDR|
-|---|---|
-|广东省广州市|https://github.com/closur3/iplist/blob/master/data/cncity/440100.txt|
-|广东省深圳市|https://github.com/closur3/iplist/blob/master/data/cncity/440300.txt|
-|广东省佛山市|https://github.com/closur3/iplist/blob/master/data/cncity/440600.txt|
 ||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/cncity.md)|
 
 ### 运营商 IP 段
@@ -75,7 +42,7 @@
 |中国教育网|https://github.com/closur3/iplist/blob/master/data/isp/cernet.txt|
 |中国科技网|https://github.com/closur3/iplist/blob/master/data/isp/cstnet.txt|
 
-### 公有云厂商 IP 段
+### 云厂商 IP 段
 
 |ISP|CIDR|
 |---|---|
