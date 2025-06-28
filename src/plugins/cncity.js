@@ -18,7 +18,6 @@ const CLOUD_ISP_LIST = [
 ]
 
 const plugin = (through2, file, cb) => {
-
   console.log('Parse ipdb')
 
   const ipdb = new IPDB(file.contents, {
@@ -32,6 +31,7 @@ const plugin = (through2, file, cb) => {
   while (true) {
     const info = ipdb.find(ip).data
 
+    // 跳过云服务商IP
     if (info.isp_domain && CLOUD_ISP_LIST.includes(info.isp_domain)) {
       bar.tick()
       ip = info.range.next
@@ -40,22 +40,13 @@ const plugin = (through2, file, cb) => {
     }
 
     const china_admin_code = info.china_admin_code
-    if (china_admin_code?.length === 6) {
+    // 只处理省级（如 110000、310000）
+    if (china_admin_code?.length === 6 && china_admin_code.endsWith('0000')) {
       let cac = china_admin_code
-      {
-        cac = `${cac.substr(0, 4)}00`
-        if (!result[cac]) {
-          result[cac] = []
-        }
-        result[cac].push(`${info.range.from}/${info.bitmask}`)
+      if (!result[cac]) {
+        result[cac] = []
       }
-      {
-        cac = `${cac.substr(0, 2)}0000`
-        if (!result[cac]) {
-          result[cac] = []
-        }
-        result[cac].push(`${info.range.from}/${info.bitmask}`)
-      }
+      result[cac].push(`${info.range.from}/${info.bitmask}`)
     }
     bar.tick()
     ip = info.range.next
@@ -69,7 +60,7 @@ const plugin = (through2, file, cb) => {
       cwd: '/',
       base: '/',
       path: `/${china_admin_code}.txt`,
-      contents: new Buffer.from(cidrs.join('\n'))
+      contents: Buffer.from(cidrs.join('\n'))
     })
     through2.push(temp)
   }
