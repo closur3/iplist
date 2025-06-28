@@ -26,10 +26,10 @@
 
 |City|CIDR|
 |---|---|
-|北京市|https://github.com/closur3/iplist/blob/master/data/cncity/110000.txt|
+|中国|https://github.com/closur3/iplist/blob/master/data/cncity/100000.txt|
 |浙江省|https://github.com/closur3/iplist/blob/master/data/cncity/330000.txt|
 |广东省|https://github.com/closur3/iplist/blob/master/data/cncity/440000.txt|
-||[ > 查看更多](https://github.com/closur3/iplist/blob/master/docs/cncity.md)|
+||[ > 查看更多](https://github.com/closur3/iplist/tree/master/data/cncity)|
 
 ### 运营商 IP 段
 
