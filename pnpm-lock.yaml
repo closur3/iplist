@@ -25,7 +25,7 @@ importers:
         version: 0.3.3
       openipdb.ipdb:
         specifier: '*'
-        version: 2025.6.28
+        version: 2025.6.29
       progress:
         specifier: ^2.0.3
         version: 2.0.3
@@ -820,8 +820,8 @@ packages:
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
 
-  openipdb.ipdb@2025.6.28:
-    resolution: {integrity: sha512-idFq60XJiEEM4jt7uENHRO1kslEea7RYjDzKBXiJTQQd9YMh7HIH/WYf5EnsI1KmSxNYb37V4b43SpEWStp+gw==}
+  openipdb.ipdb@2025.6.29:
+    resolution: {integrity: sha512-kQ3otYTHsnUk260+5rhEPE+d8PoG72ifGChGVgNzFrlmu0Yl6rgMPXIPCLtF63GZVg64hM0ynd0g2jc4Tf7g7A==}
 
   ordered-read-streams@1.0.1:
     resolution: {integrity: sha512-Z87aSjx3r5c0ZB7bcJqIgIRX5bxR7A4aSzvIbaxd0oTkWBCOoKfuGHiKj60CHVUgg1Phm5yMZzBdt8XqRs73Mw==}
@@ -2178,7 +2178,7 @@ snapshots:
     dependencies:
       wrappy: 1.0.2
 
-  openipdb.ipdb@2025.6.28: {}
+  openipdb.ipdb@2025.6.29: {}
 
   ordered-read-streams@1.0.1:
     dependencies:
