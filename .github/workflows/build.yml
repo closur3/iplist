@@ -22,7 +22,7 @@ jobs:
         run: |
           rm -rf ./data || true
           rm -f pnpm-lock.yaml
-          pnpm install --no-frozen-lockfile
+          pnpm install --no-lockfile
           cp ./node_modules/openipdb.ipdb/openipdb.ipdb /tmp/openipdb.ipdb
           ls -al /tmp/openipdb.ipdb
           pnpm run build
